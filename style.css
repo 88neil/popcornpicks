@@ -1,0 +1,135 @@
+h1 {
+    font-family: "Krona One", sans-serif;
+    margin-left: 1em;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    text-shadow: 2px 2px 2px black; /* drop shadow effect */
+    user-select: none; /* prevent text selection */
+}
+
+h1:hover {
+    text-shadow: 0 0 10px white; /* white glow effect */
+    transition: text-shadow 0.2s ease-in-out; /* fade in effect */
+}
+
+body {
+    background-color: #1E1E1E; /* dark grey page background */
+}
+
+.search-bar {
+    display: flex; 
+    align-items: center;
+    justify-content: center; /* center items horizontally */
+    background-color: #313131; /* darker for the bar */
+    border-radius: 25px;
+    padding: 0.7%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* drop shadow effect */
+    width: 100%;
+    max-width: 400px;
+    height: 0.9375em; 
+    margin-right: 10em; /* center the bar */
+    border: 1px solid white; /* white stroke */
+}
+
+/* adaptation to screen width, for responsiveness */
+@media (max-width: 50em) {
+    .tab {
+        display: none; /* hide tabs on smaller screens */
+    }
+
+    .search-bar {
+        justify-content: center; 
+        align-items: center;
+        width: auto;
+        max-width: 50px;
+        padding: 5px;
+        height: auto;
+    }
+
+    .search-icon {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.search-bar button {
+    flex-shrink: 0; /* prevent button from shrinking */
+}
+
+.header {
+    display: flex; /* 'flexible' (can manipulate elements) */
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px; 
+}
+
+
+.search-bar button {
+    font-family: "Kumbh Sans", sans-serif;
+    font-size: 16px;
+}
+
+.search-icon {
+    color: white;
+    font-size: 18px;
+    margin-left: 10px;
+    width: 23px;
+    height: 23px;
+    cursor: pointer;
+}
+
+.tab {
+    background: none;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    margin-right: 2em;
+}
+
+.user-icon {
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.user-initial {
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    font-family: "Kumbh Sans", sans-serif;
+}
+
+.user-name {
+    font-size: 16px;
+    font-family: "kumbh Sans", sans-serif;
+    color: white;
+}
+
+.search-icon:hover {
+    transform: rotate(360deg);
+    transition: transform 0.5s ease-in-out; /* hover spin effect */
+}
+
+.tab:hover { /* change background on hover (hence .tab:hover) */
+    background-color: #333; 
+    border-radius: 20px;
+    padding: 5px 15px; /* smaller hover background */
+    text-shadow: 0 0 10px white; /* white glow effect */
+    transition: text-shadow 0.2s ease-in-out; /* fade in effect */
+}
+
