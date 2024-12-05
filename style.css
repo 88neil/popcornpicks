@@ -118,11 +118,31 @@ body {
     font-size: 16px;
     font-family: "kumbh Sans", sans-serif;
     color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.user-role {
+    font-size: 10px;
+    font-family: "kumbh Sans", sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
 }
 
 .search-icon:hover {
     transform: rotate(360deg);
     transition: transform 0.5s ease-in-out; /* hover spin effect */
+}
+
+.kungfupanda {
+    max-width: 562px;
+    max-height: 277px;
+    margin: 2em;
+    border-radius: 52px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); /* drop shadow effect */
+    filter: brightness(0.8); /* slightly darken the image */
+    object-fit: contain; /* pad image rather than stretch */
 }
 
 .tab:hover { /* change background on hover (hence .tab:hover) */
