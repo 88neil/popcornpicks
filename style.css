@@ -135,15 +135,33 @@ body {
     transition: transform 0.5s ease-in-out; /* hover spin effect */
 }
 
-.kungfupanda {
-    max-width: 562px;
-    max-height: 277px;
-    margin: 2em;
-    border-radius: 52px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); /* drop shadow effect */
-    filter: brightness(0.8); /* slightly darken the image */
-    object-fit: contain; /* pad image rather than stretch */
+.movie {
+    position: relative; 
+    display: inline-block; 
+    width: 100%;
 }
+
+.movie-name {
+    position: absolute; /*  relative to the .movie container */
+    bottom: 40%;
+    left: 3%; 
+    font-size: 30px;
+    font-family: "Kumbh Sans";
+    color: white;
+    padding: 5px 10px;
+    text-align: left;
+    max-width: 15%; 
+}
+
+.movie-image {
+    max-width: 35.125em;
+    max-height: 17.3125em;
+    margin: 2em;
+    border-radius: 10px;
+    filter: brightness(0.6); /* slightly darken the image */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* drop shadow effect */
+}
+
 
 .tab:hover { /* change background on hover (hence .tab:hover) */
     background-color: #333; 
