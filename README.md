@@ -1,10 +1,10 @@
 # 🍿 PopcornPicks - Movie Review Website 
 This is a basic movie review website created for my HSC Software Engineering assignment. The site allows users to explore movie reviews as well as posting their own.
 
-## Coding Languages 
-- **HTML**: Structure of the website.
-- **CSS**: Styling and layout.
-- **JavaScript**: Interactivity and dynamic behaviour.
+## Languages
+- **HTML**: For the main structure of the website.
+- **CSS**: For the Styling & Layout of the site.
+- **JavaScript**: For scripting interactivity into my website.
 
 ## Setup Instructions
 1. Clone the repository or download the project files.
