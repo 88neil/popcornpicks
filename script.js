@@ -77,10 +77,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // check credentials in localstorage 
         if (storedUser && storedUser.email === document.getElementById('loginEmail').value && storedUser.password === document.getElementById('loginPassword').value) {
-            showUserInfo();
-            updateSampleReview();
-            closeModal('loginModal');
-            loadReviews(); // load the reviews after login
+            var loginModal = document.getElementById('loginModal');
+            loginModal.style.transition = 'opacity 0.3s ease-out'; // smooth modal transition (fade out) on successful login
+            loginModal.style.opacity = '0';
+            
+            setTimeout(() => {
+                closeModal('loginModal');
+                showUserInfo();
+                updateSampleReview();
+                loadReviews(); // load the reviews after login
+            }, 300);
         } else {
             alert('Invalid email or password.'); // TODO: make an actual popup rather than an alert box
         }
@@ -209,8 +215,5 @@ document.addEventListener('DOMContentLoaded', function() {
 document.querySelector('.dropdown-icon').addEventListener('click', function() {
     localStorage.removeItem('user'); 
     alert('You have logged out.');
-    showAccountButton();
-    updateSampleReview();
-    loadReviews();
-    location.reload(); // refresh the page
+    window.location.reload(); // reload after logout 
 });
