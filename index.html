@@ -1,43 +1,132 @@
 <!DOCTYPE HTML>
+<html lang="en">
 <head> 
-    <!-- emoji favicon  -->
     <link rel="icon" href="img/favicon.svg">
     <title>PopcornPicks</title>
     <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap" rel="stylesheet">    <!-- googlefonts loader for poppins, kroma one & kumbh sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="header">
         <h1>PopcornPicks</h1>
         <div class="search-bar">
-            <button class="tab">Movie</button>
+            <button class="tab active">Movie<button>
             <button class="tab">Series</button>
             <button class="tab">Shows</button>
-            <img class="search-icon" src="img/search.png">
-        </div>
-        <div class="user">
-            <div class="user-icon">
-                <p class="user-initial">N</p>
-            </div>
-            <div class="user-info">
-                <p class="user-name">Neil Patil</p>
-                <p class="user-role">User</p>
+            <div class="search-wrapper">
+                <img class="search-icon" src="img/search.png">
+                <input type="text" placeholder="Search..." class="search-input">
             </div>
         </div>
-    </div>
-    <div class="recommended">
-        <div class="recommended-movies">
-            <div class="movie">
-                <img class="movie-image" src="img/kungfupanda.webp">    
-                <p class="movie-name">The Adventure of Blue Sword</p>
+        <div class="user-section">
+            <div class="notification">
+                <img src="img/notification.png" class="notification-icon">
+                <span class="notification-dot"></span>
             </div>
-            <div class="movie wide"> <!-- wide class is added to make the movie card wider -->
-                <img class="movie-image" src="img/train_dragon.jpg">    
-                <p class="movie-name">How to Train Your Dragon</p>
+            <div class="user">
+                <div class="user-icon">
+                    <p class="user-initial">N</p>
+                </div>
+                <div class="user-info">
+                    <p class="user-name">Neil Patil</p>
+                    <p class="user-role">User</p>
+                </div>
+                <img src="img/dropdown.png" class="dropdown-icon">
             </div>
         </div>
     </div>
+
+    <div class="featured">
+        <div class="featured-movies">
+            <div class="movie-card">
+                <img class="movie-image" src="img/kungfupanda.webp">
+                <div class="movie-info">
+                    <h2>The Adventure of Blue Sword</h2> <!-- changed the movie name because 'kung fu panda' didn't fit as nicely in the box 😂 -->
+                    <div class="movie-meta">
+                        <img src="img/dreamworks.svg" class="studio-logo" style="filter: brightness(0) invert(1); border: 0.5px solid #ffffff; border-radius: 50%;"> <!-- inline style to make the logo appear white and add a circular outline -->
+                        <span class="studio-name">Dreamworks</span>
+                        <div class="rating">
+                            <span style="color: orange;">4.3/5</span>
+                            <img src="img/star.png" class="star-icon">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="movie-card wide">
+                <img class="movie-image" src="img/train_dragon.jpg">
+                <div class="movie-info">
+                    <h2>How to Train<br>Your Dragon</h2>
+                    <div class="movie-meta">
+                        <img src="img/dreamworks.svg" class="studio-logo" style="filter: brightness(0) invert(1); border: 0.5px solid #ffffff; border-radius: 50%;"> <!-- inline style to make the logo appear white and add a circular outline -->
+                        <span class="studio-name">Dreamworks</span>
+                        <div class="rating">
+                            <span style="color: orange;">4.8/5</span>
+                            <img src="img/star.png" class="star-icon">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="categories">
+        <button class="category-btn active"><img src="img/trending.png">Trending</button>
+        <button class="category-btn"><img src="img/action.png">Action</button>
+        <button class="category-btn"><img src="img/animation.png">Animation</button>
+        <button class="category-btn"><img src="img/romance.png">Romance</button>
+        <button class="category-btn"><img src="img/horror.png">Horror</button>
+        <button class="category-btn"><img src="img/special.png">Special</button>
+    </div>
+
+    <div class="trending-section">
+        <h2>Trending</h2>
+        <div class="trending-grid"> 
+            <div class="trending-card">
+                <img src="img/batman.jpg">
+                <div class="movie-details">
+                    <h3>The Batman</h3>
+                    <div class="rating" style="color: orange;">4.3/5 ★</div>
+                </div>
+            </div>
+            <div class="trending-card">
+                <img src="img/spiderman_2.webp">
+                <div class="movie-details">
+                    <h3>Spiderman 2</h3>
+                    <div class="rating" style="color: orange;">4.8/5 ★</div>
+                </div>
+            </div>
+            <div class="trending-card">
+                <img src="img/lastofus.jpg">
+                <div class="movie-details">
+                    <h3>The Last of Us</h3>
+                    <div class="rating" style="color: orange;">3.5/5 ★</div>
+                </div>
+            </div>
+            <div class="trending-card">
+                <img src="img/himym.jpg">
+                <div class="movie-details">
+                    <h3>HIMYM</h3>
+                    <div class="rating" style="color: orange;">3.8/5 ★</div>
+                </div>
+            </div>
+            <div class="trending-card">
+                <img src="img/friends.jpg">
+                <div class="movie-details">
+                    <h3>Friends</h3>
+                    <div class="rating" style="color: orange;">4.9/5 ★</div>
+                </div>
+            </div>
+            <div class="trending-card">
+                <img src="img/thepursuit.jpg">
+                <div class="movie-details">
+                    <h3>The Pursuit</h3>
+                    <div class="rating" style="color: orange;">4.4/5 ★</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
