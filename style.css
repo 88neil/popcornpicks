@@ -141,19 +141,20 @@ body {
 .movie {
     position: relative; 
     display: inline-block; 
-    width: 100%;
+    width: 35%;
 }
 
 .movie-name {
     position: absolute; /*  relative to the .movie container */
     bottom: 40%;
-    left: 3%; 
+    left: 10%; 
     font-size: 30px;
-    font-family: "Kumbh Sans";
+    font-family: "Kumbh Sans", sans-serif;
+    font-weight: 300;
     color: white;
     padding: 5px 10px;
     text-align: left;
-    max-width: 15%; 
+    max-width: 50%; 
 }
 
 .movie-image {
@@ -172,4 +173,20 @@ body {
     padding: 5px 15px; /* smaller hover background */
     text-shadow: 0 0 10px white; /* white glow effect */
     transition: text-shadow 0.2s ease-in-out; /* fade in effect */
+}
+
+.recommended-movies {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.movie {
+    flex: 0 1 35%; /* 35% width, no shrinking, no growing */
+    margin: 10px;  /* space between movies */
+}
+
+.wide {
+    flex: 1; /* take up all available space */
 }
