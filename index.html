@@ -24,20 +24,50 @@
                 <input type="text" placeholder="Search..." class="search-input">
             </div>
         </div>
+
+        <!-- registration modal -->
+        <div id="registrationModal" class="modal">
+            <div class="modal-content"> 
+                <span class="close-button" onclick="closeModal('registrationModal')">×</span> <!--  onclick event to close the modal when the 'x' button is clicked -->
+                <h2>Register</h2>
+                <form id="registrationForm">
+                    <input type="email" id="regEmail" placeholder="Email" required> <!-- added 'required' attribute to make the input fields mandatory -->
+                    <input type="text" id="regUsername" placeholder="Username" required>
+                    <input type="password" id="regPassword" placeholder="Password" required>
+                    <button type="submit">Register</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- login modal -->
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button" onclick="closeModal('loginModal')">×</span> <!--  onclick event to close the modal when the 'x' button is clicked -->
+                <h2>Login</h2> 
+                <form id="loginForm">
+                    <input type="email" id="loginEmail" placeholder="Email" required> <!-- added 'required' attribute to make the input fields mandatory -->
+                    <input type="password" id="loginPassword" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- user section (user icon and name) -->
         <div class="user-section">
             <div class="notification">
-                <img src="img/notification.png" class="notification-icon">
-                <span class="notification-dot"></span>
+            <img src="img/notification.png" class="notification-icon">
+            <span class="notification-dot"></span>
             </div>
-            <div class="user">
-                <div class="user-icon">
-                    <p class="user-initial">N</p>
-                </div>
-                <div class="user-info">
-                    <p class="user-name">Neil Patil</p>
-                    <p class="user-role">User</p>
-                </div>
-                <img src="img/dropdown.png" class="dropdown-icon">
+            <button id="accountButton" class="account-button">Account</button> 
+            <div id="userInfo" class="user" style="display: none;">
+            <div class="user-icon">
+                <p id="userInitial" class="user-initial"></p>
+            </div>
+            <div class="user-info">
+                <p id="userName" class="user-name"></p>
+                <p class="user-role">User</p>
+            </div>
+            <img src="img/dropdown.png" class="dropdown-icon">
             </div>
         </div>
     </div>
