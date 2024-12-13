@@ -1,1 +1,181 @@
 /* i created another css file to make it easier for me to keep track of modifications */
+
+.movie-container {
+    position: relative;
+    min-height: calc(100vh - 90px); /* subtract the height of the navbar (responsive) */
+    padding: 2rem;
+    color: var(--text-primary);
+}
+
+.movie-backdrop { /* movie background image */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('img/sample-wall.jpg'); /* add the background image, darken it */
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* push it to the back, behind the other elements */
+}
+
+.movie-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.movie-logo {
+    width: 300px; 
+    margin-bottom: 2rem; /* space at the bottom */
+}
+
+.movie-stats {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+}
+
+.movie-genres, .movie-cast, .movie-directors, .movie-summary { /* movie genres, cast, directors, and summary */
+    margin-bottom: 2rem;
+}
+
+h3 {
+    font-family: 'Poppins', sans-serif; 
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.genre-tags, .cast-members {
+    display: flex; 
+    gap: 1rem;
+}
+
+.genre, .cast-member, .director {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1rem; 
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.movie-summary p {
+    line-height: 1.6;
+    max-width: 800px;
+}
+
+.reviews-section {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+.reviews-section h2 {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 1.5rem;
+}
+
+.review-form {
+    background: rgba(0, 0, 0, 0.3); /* semi-transparent background */
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.review-title, .review-content { /* review title and content */
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1); /*  semi-transparent background */
+    border: none;
+    padding: 1rem;
+    margin-bottom: 1rem; /*  space at the bottom */
+    color: var(--text-primary);
+    border-radius: 5px;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.review-content {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.post-button {
+    background: rgba(74, 144, 226, 0.5); /*  semi-transparent blue background to the button */
+    font-family: 'Poppins';
+    font-weight: bold;
+    color: white;
+    padding: 0.5rem 2rem; 
+    border: none;
+    border-radius: 20px; 
+    cursor: pointer; /* show hand cursor to indicate it is clickable */
+    float: right;
+}
+
+.review-list {
+    display: flex;
+    flex-direction: column; /* stack the reviews vertically */
+    gap: 1rem;
+}
+
+.review-item {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1.5rem;
+    border-radius: 10px; 
+    position: relative;
+}
+
+.reviewer {
+    display: flex;
+    align-items: center;
+    gap: 1rem; 
+    margin-bottom: 0.5rem;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    background: #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.rating {
+    color: orange;
+    margin-bottom: 0.5rem;
+}
+
+.edit-button {
+    background: rgba(74, 144, 226, 0.5); /*  semi-transparent blue background to the button */
+    font-family: 'Poppins';
+    font-weight: bold;
+    position: absolute; /* absolute position to the button */
+    top: 1.5rem;
+    right: 1.5rem;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) { /* responsive design for smaller screens */
+    .movie-content {
+        padding: 1rem;
+    }
+
+    .movie-logo {
+        width: 200px;
+    }
+
+    .movie-stats {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .genre-tags, .cast-members {
+        flex-wrap: wrap;
+    }
+}
