@@ -7,16 +7,16 @@
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
 }
 
 body {
-    background-color: var(--primary-bg);
+    background-color: var(--primary-bg); 
     color: var(--text-primary);
-    font-family: "Kumbh Sans", sans-serif;
-    min-height: 100vh;
+    font-family: "Kumbh Sans", sans-serif; 
+    min-height: 100vh; /* make the body at least the height of the viewport */
     overflow-x: hidden;
 }
 
@@ -32,47 +32,47 @@ body {
 }
 
 h1 {
-    font-family: "Krona One", sans-serif;
+    font-family: "Krona One", sans-serif; 
     font-weight: 400;
     color: var(--text-primary);
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     user-select: none;
-    transition: text-shadow 0.2s ease-in-out;
+    transition: text-shadow 0.2s ease-in-out; /* smooth text shadow transition */
 }
 
 h1:hover {
-    text-shadow: 0 0 10px var(--text-primary);
+    text-shadow: 0 0 10px var(--text-primary); /* make text glow on hover */
 }
 
 .search-bar {
-    display: flex;
-    align-items: center;
+    display: flex; 
+    align-items: center; 
     background-color: var(--secondary-bg);
-    border-radius: 25px;
+    border-radius: 25px; 
     padding: 0.5rem;
     max-width: 500px;
     width: 100%;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1); 
 }
 
 .search-wrapper {
     display: flex;
-    align-items: center;
+    align-items: center; 
     margin-left: auto;
-    padding: 0 1rem;
+    padding: 0 1rem; 
 }
 
-.search-input {
+.search-input { 
     background: none;
-    border: none;
-    color: var(--text-primary);
+    border: none;  
+    color: var(--text-primary); 
     padding: 0.5rem;
     width: 150px;
     font-family: inherit;
 }
 
-.search-input:focus {
-    outline: none;
+.search-input:focus { /* remove the annoying rectangle textbook outline when the search is focused */
+    outline: none; 
 }
 
 .tab {
@@ -87,7 +87,7 @@ h1:hover {
 }
 
 .tab.active, .tab:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    text-shadow: 0 0 10px var(--text-primary);
 }
 
 .user-section {
@@ -102,12 +102,12 @@ h1:hover {
 }
 
 .notification-icon {
-    width: 24px;
-    height: 24px;
+    width: 24px; 
+    height: 24px; 
 }
 
 
-.notification-dot {
+.notification-dot { /* red dot, doesn't have any functionality right now */
     position: absolute;
     top: -2px;
     right: -2px;
@@ -117,14 +117,14 @@ h1:hover {
     border-radius: 50%;
 }
 
-.user {
+.user { /* user icon and name */
     display: flex;
     align-items: center;
     gap: 0.5rem;
     cursor: pointer;
 }
 
-.user-icon {
+.user-icon {   /* user icon */
     width: 40px;
     height: 40px;
     background-color: #000;
@@ -134,30 +134,30 @@ h1:hover {
     align-items: center;
 }
 
-.user-info {
+.user-info { /* user name and role */
     margin-right: 0.5rem;
 }
 
-.user-name {
+.user-name { /* user name */
     font-weight: 500;
 }
 
-.user-role {
+.user-role { /* user role */
     font-size: 0.8rem;
     color: var(--text-secondary);
 }
 
-.featured {
+.featured { /* featured movies section */
     padding: 2rem;
 }
 
-.featured-movies {
+.featured-movies { /* featured movies grid */
     display: flex;
     gap: 2rem;
     margin-bottom: 2rem;
 }
 
-.movie-card {
+.movie-card { /* movie card */
     position: relative;
     border-radius: 2rem;
     overflow: hidden;
@@ -165,12 +165,12 @@ h1:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
-.movie-card.wide {
+.movie-card.wide { /* wide movie card variant (for top -> second element on homepage) */
     flex: 2;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
-.movie-image {
+.movie-image { /* movie image */
     width: 100%;
     height: 300px;
     object-fit: cover;
@@ -178,65 +178,65 @@ h1:hover {
     transition: filter 0.3s;
 }
 
-.movie-image:hover {
+.movie-image:hover { /* remove the brightness filter on hover */
     filter: brightness(1);
 }
 
-.movie-info {
-    display: flex;
+.movie-info { /* movie info */
+    display: flex; 
     flex-direction: column; /* make the text show on top of the studio info */
-    justify-content: space-between;
-    position: absolute;
+    justify-content: space-between; /* push the text to the top */
+    position: absolute; 
     bottom: 2rem;
     left: 2rem;
     right: 2rem;
 }
 
-.movie-info h2 {
+.movie-info h2 { /* movie title */
     font-weight: 300;
     width: 70%;
     font-size: 2rem;
     margin-bottom: 6rem;
 }
 
-.movie-meta {
+.movie-meta { /* movie meta info */
     display: flex;
-    align-items: center;
+    align-items: center; 
     gap: 1rem;
     margin-top: 0.5rem;
 }
 
-.studio-logo {
+.studio-logo { /* studio logo */
     width: 24px;
     height: 24px;
 }
-
-.rating {
+ 
+.rating {   /* movie rating */
     margin-left: auto;
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
 
-.rating span {
+.rating span { /* rating text */
     font-size: 1.2rem;
 }
 
-.star-icon {
+.star-icon { /* star icon */
     width: 22px;
     height: 22px;
 }
 
 .categories {
     display: flex;
-    gap: 1rem;
-    padding: 0rem 2rem;
-    overflow-x: auto;
-    scrollbar-width: none;
+    gap: 1rem; /* space between the buttons */
+    padding: 0rem 2rem; 
+    overflow-x: auto; /* horizontal scrollbar */
+    scrollbar-width: none; /* hide scrollbar */
 }
 
 .categories::-webkit-scrollbar {
-    display: none;
+    display: none; /* hide scrollbar */
 }
 
 .category-btn {
@@ -247,11 +247,11 @@ h1:hover {
     gap: 0.5rem;
     background-color: var(--secondary-bg);
     border: none;
-    color: var(--text-primary);
+    color: var(--text-primary); 
     padding: 1.2rem 1.5rem;
     border-radius: 0.5rem;
-    cursor: pointer;
-    transition: background-color 0.2s;
+    cursor: pointer; /* show hand cursor to indicate it is clickable */
+    transition: background-color 0.2s; 
     white-space: nowrap;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
@@ -260,8 +260,8 @@ h1:hover {
 }
 
 .category-btn img {
-    width: 20px;
-    height: 20px;
+    width: 20px;  
+    height: 20px;  
 }
 
 .category-btn.active, .category-btn:hover {
@@ -282,7 +282,7 @@ h1:hover {
 
 .trending-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* make grid responsive */
     gap: 1.5rem;
 }
 
@@ -291,6 +291,7 @@ h1:hover {
     border-radius: 0.5rem;
     overflow: hidden;
     transition: transform 0.2s;
+    cursor: pointer; /* show hand click cursor to indicate it is clickable */
 }
 
 .trending-card:hover {
@@ -308,20 +309,20 @@ h1:hover {
     filter: brightness(1); /* hide the brightness filter effect on hover */
 }
 
-.movie-details {
+.movie-details { /* movie details */
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
     padding: 1rem;
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8)); /* gradient background */
 }
 
-.movie-details h3 {
+.movie-details h3 { /* target h3 */ 
     margin-bottom: 0.5rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) { /* responsive design for smaller screens (?) */
     .header {
         flex-direction: column;
         gap: 1rem;
@@ -329,35 +330,36 @@ h1:hover {
     }
 
     .search-bar {
-        order: 2;
+        order: 2; 
     }
 
     .user-section {
-        order: 1;
+        order: 1; 
         width: 100%;
-        justify-content: flex-end;
+        justify-content: flex-end; /* align user section to the right */
     }
 
     .featured-movies {
-        flex-direction: column;
+        flex-direction: column; /* stack the cards vertically */
     }
 
     .movie-card.wide {
-        flex: 1;
+        flex: 1; /* make the wide card take full width */
     }
 
     .trending-grid {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* make grid responsive */
     }
 }
 
 
 .search-icon {
     width: 24px;
-    height: 24px;
+    height: 24px; 
 }
 
 .dropdown-icon {
     width: 24px;
     height: 24px;
 }
+
