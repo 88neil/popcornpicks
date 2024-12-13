@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <head> 
     <!-- site icon  -->
-    <link rel="icon" href="img/sample-icon.png">
+    <link rel="icon" href="img/sa</div>mple-icon.png">
     <!-- title of the page -->
     <title>The Pursuit of Happyness - PopcornPicks</title>
     <!-- load fonts from googlefonts -->
@@ -18,7 +18,7 @@
         <div class="search-bar"> 
             <button class="tab active" onclick="window.location.href='index.html'">Movie</button> <!-- redirect back to the homepage -->
             <button class="tab" onclick="window.location.href='index.html'">Series</button>
-            <button class="tab" onclick="window.location.href='in</div>dex.html'">Shows</button>
+            <button class="tab" onclick="window.location.href='index.html'">Shows</button>
             <div class="search-wrapper"> <!-- search bar -->
                 <img class="search-icon" src="img/search.png"> <!-- search icon -->
                 <input type="text" placeholder="Search..." class="search-input"> <!-- search input -->
@@ -29,24 +29,53 @@
                 <img src="img/notification.png" class="notification-icon">
                 <span class="notification-dot"></span>
             </div>
-            <div class="user">
+            <button id="accountButton" class="account-button">Account</button>
+            <div id="userInfo" class="user" style="display: none;">
                 <div class="user-icon">
-                    <p class="user-initial">N</p>
+                    <p id="userInitial" class="user-initial"></p>
                 </div>
                 <div class="user-info">
-                    <p class="user-name">Neil Patil</p>
+                    <p id="userName" class="user-name"></p>
                     <p class="user-role">User</p>
                 </div>
                 <img src="img/dropdown.png" class="dropdown-icon">
             </div>
         </div>
     </div>
+
+    <!-- registration modal ui -->
+    <div id="registrationModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal('registrationModal')">×</span> <!--  onclick event to close the modal when the 'x' button is clicked -->
+            <h2>Register</h2>
+            <form id="registrationForm">
+                <input type="email" id="regEmail" placeholder="Email" required>
+                <input type="text" id="regUsername" placeholder="Username" required>
+                <input type="password" id="regPassword" placeholder="Password" required>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- login modal ui -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal('loginModal')">×</span> <!--  onclick event to close the modal when the 'x' button is clicked -->
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="email" id="loginEmail" placeholder="Email" required>
+                <input type="password" id="loginPassword" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
     <div class="movie-container">
-        <div class="movie-backdrop"></div>
+        <div class="movie-backdrop"></div> <!-- backdrop image of the movie -->
         <div class="movie-content">
-            <img src="img/sample-icon.png" class="movie-logo">
+            <img src="img/sample-icon.png" class="movie-logo"> <!-- movie logo -->
             
-            <div class="movie-stats">
+            <div class="movie-stats"> <!-- movie stats -->
                 <span class="duration">117min</span>
                 <span class="year">2006</span>
                 <span class="rating">8.0 ★</span>
@@ -82,21 +111,20 @@
         <div class="reviews-section">
             <h2>Reviews</h2>
             <div class="review-form">
-                <input type="text" placeholder="Title" class="review-title">
-                <textarea placeholder="Review Content" class="review-content"></textarea>
-                <button class="post-button">POST</button>
+                <input type="text" placeholder="Title" class="review-title" id="reviewTitle"> <!-- review title -->
+                <textarea placeholder="Review Content" class="review-content" id="reviewContent"></textarea>  <!-- review content -->
+                <button class="post-button" id="postReview">POST</button>
             </div>
             <!-- list of reviews posted by users -->
-             <!-- current user review (?) -->
-            <div class="review-list">
-                <div class="review-item">
+            <div class="review-list" id="reviewList">
+                <div class="review-item" id="sampleReview">
                     <div class="reviewer">
-                        <span class="avatar">N</span>
-                        <span class="name">Neil Patil</span>
+                        <span class="avatar" id="sampleReviewAvatar">S</span>
+                        <span class="name" id="sampleReviewName">Sample User</span>
                     </div>
-                    <div class="rating">★★★★★ 5.0</div>
-                    <p class="review-text">The Pursuit of Happiness is a great film.. It is highly inspirational and can be seen as tragic but every inspirational story has a "fall".</p>
-                    <button class="edit-button">EDIT</button>
+                    <div class="rating" id="sampleReviewRating">★★★★★ 5.0</div>
+                    <p class="review-text" id="sampleReviewText">The Pursuit of Happiness is a great film.. It is highly inspirational and can be seen as tragic but every inspirational story has a "fall".</p>
+                    <button class="edit-button" id="editReview" style="display: none;">EDIT</button>
                 </div>
                 <!-- sample reviews -->
                 <div class="review-item">
