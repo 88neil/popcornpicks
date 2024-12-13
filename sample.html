@@ -1,25 +1,30 @@
 <!DOCTYPE HTML>
 <head> 
+    <!-- site icon  -->
     <link rel="icon" href="img/sample-icon.png">
+    <!-- title of the page -->
     <title>The Pursuit of Happyness - PopcornPicks</title>
+    <!-- load fonts from googlefonts -->
     <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- load stylesheets (css) -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="movie-style.css">
+    <link rel="stylesheet" href="sample-style.css">
 </head>
 <body>
-    <div class="header">
-        <div class="search-bar">
-            <button class="tab active">Movie</button>
-            <button class="tab">Series</button>
-            <button class="tab">Shows</button>
-            <div class="search-wrapper">
-                <img class="search-icon" src="img/search.png">
-                <input type="text" placeholder="Search..." class="search-input">
+    <!-- header section (topbar) -->
+    <div class="header" style="background: linear-gradient(to bottom, black, transparent); position: relative; z-index: 10;"> <!--  gradient background for the header -->
+        <div class="search-bar"> 
+            <button class="tab active" onclick="window.location.href='index.html'">Movie</button> <!-- redirect back to the homepage -->
+            <button class="tab" onclick="window.location.href='index.html'">Series</button>
+            <button class="tab" onclick="window.location.href='in</div>dex.html'">Shows</button>
+            <div class="search-wrapper"> <!-- search bar -->
+                <img class="search-icon" src="img/search.png"> <!-- search icon -->
+                <input type="text" placeholder="Search..." class="search-input"> <!-- search input -->
             </div>
         </div>
-        <div class="user-section">
+        <div class="user-section"> 
             <div class="notification">
                 <img src="img/notification.png" class="notification-icon">
                 <span class="notification-dot"></span>
@@ -36,3 +41,84 @@
             </div>
         </div>
     </div>
+    <div class="movie-container">
+        <div class="movie-backdrop"></div>
+        <div class="movie-content">
+            <img src="img/sample-icon.png" class="movie-logo">
+            
+            <div class="movie-stats">
+                <span class="duration">117min</span>
+                <span class="year">2006</span>
+                <span class="rating">8.0 ★</span>
+            </div>
+            <!-- movie genres [subheadings] -->
+            <div class="movie-genres">
+                <h3>GENRES</h3>
+                <div class="genre-tags">
+                    <span class="genre">Biography</span>
+                    <span class="genre">Drama</span>
+                </div>
+            </div>
+            <!-- movie cast [subheadings] -->
+            <div class="movie-cast">
+                <h3>CAST</h3>
+                <div class="cast-members">
+                    <span class="cast-member">Will Smith</span>
+                    <span class="cast-member">Jaden Smith</span>
+                </div>
+            </div>
+            <!-- movie directors [subheadings] -->
+            <div class="movie-directors">
+                <h3>DIRECTORS</h3>
+                <span class="director">Gabriele Muccino</span>
+            </div>
+            <!-- movie summary [subheadings] -->
+            <div class="movie-summary">
+                <h3>SUMMARY</h3>
+                <p>Life is a struggle for single father Chris Gardner. Evicted from their apartment, he and his young son find themselves alone with no place to go. Even though Chris eventually lands a job as an intern at a prestigious brokerage firm, the position pays no money. The pair must live in shelters and endure many hardships, but Chris refuses to give in to despair as he struggles to create a better life for himself and his son.</p>
+            </div>
+        </div>
+        <!-- reviews of the movie -->
+        <div class="reviews-section">
+            <h2>Reviews</h2>
+            <div class="review-form">
+                <input type="text" placeholder="Title" class="review-title">
+                <textarea placeholder="Review Content" class="review-content"></textarea>
+                <button class="post-button">POST</button>
+            </div>
+            <!-- list of reviews posted by users -->
+             <!-- current user review (?) -->
+            <div class="review-list">
+                <div class="review-item">
+                    <div class="reviewer">
+                        <span class="avatar">N</span>
+                        <span class="name">Neil Patil</span>
+                    </div>
+                    <div class="rating">★★★★★ 5.0</div>
+                    <p class="review-text">The Pursuit of Happiness is a great film.. It is highly inspirational and can be seen as tragic but every inspirational story has a "fall".</p>
+                    <button class="edit-button">EDIT</button>
+                </div>
+                <!-- sample reviews -->
+                <div class="review-item">
+                    <div class="reviewer">
+                        <span class="avatar">J</span>
+                        <span class="name">John Doe</span>
+                    </div>
+                    <div class="rating">★★☆☆☆ 3.0</div>
+                    <p class="review-text">The movie was great. My wife enjoyed it but my kids didn't like it. Gabrielle Muccino needs to make more movies catered to children.</p>
+                </div>
+
+                <div class="review-item">
+                    <div class="reviewer">
+                        <span class="avatar">S</span>
+                        <span class="name">Steve Jobs</span>
+                    </div>
+                    <div class="rating">★★★★☆ 4.0</div>
+                    <p class="review-text">This movie is super inspiring.. It helped me gain insight into my professional life and I can attribute my success to it.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
