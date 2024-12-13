@@ -12,9 +12,12 @@ h1:hover {
     text-shadow: 0 0 10px white; /* white glow effect */
     transition: text-shadow 0.2s ease-in-out; /* fade in effect */
 }
-
 body {
     background-color: #1E1E1E; /* dark grey page background */
+    margin: 0; 
+    height: 100vh; /* ensure it covers the full  height */
+    width: 100vw; /* ensure it covers the full  width */
+    overflow-x: hidden; /* hide horizontal scrollbar */
 }
 
 .search-bar {
@@ -170,4 +173,3 @@ body {
     text-shadow: 0 0 10px white; /* white glow effect */
     transition: text-shadow 0.2s ease-in-out; /* fade in effect */
 }
-
