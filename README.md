@@ -10,7 +10,7 @@ This is a basic movie review website created for my HSC Software Engineering ass
 1. Clone the repository or download the project files.
 2. Open the `index.html` file in a web browser to view the site.
 **OR**
-View the website through github pages (static, login database will not properly function)
+View the website through github pages (demo, passwords will be stored in localStorage)
 
 ## Author
 Neil  
